@@ -2,9 +2,9 @@ name: main
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
   workflow_dispatch:
 
@@ -17,19 +17,18 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '14'
-      
+
       - run: npm install
       - run: npm test
-  
+
   lint:
     runs-on: ubuntu-latest
-    
+
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
           node-version: '14'
-      
+
       - run: npm install
       - run: npm run lint
-

@@ -48,7 +48,9 @@
     "autoprefixer": "^9.8.6",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-jest": "^24.4.0",
     "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-testing-library": "^4.11.0",
     "postcss": "^7.0.36",
     "prettier": "2.3.2",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.7"
