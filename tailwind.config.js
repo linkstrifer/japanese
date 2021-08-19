@@ -5,8 +5,16 @@ module.exports = {
   darkMode: 'media',
   theme: {
     colors: {
-      background: colors.purple[100],
-      primary: colors.purple,
+      primary: {
+        base: colors.purple[600],
+        light: colors.purple[100],
+        dark: colors.purple[900],
+      },
+      secondary: {
+        base: colors.blue[600],
+        light: colors.blue[100],
+        dark: colors.blue[900],
+      },
       white: colors.white,
     },
     extend: {},

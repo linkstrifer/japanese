@@ -1,5 +1,7 @@
 import { useCallback, useEffect, useState } from 'react'
 
+import Button from '../Button'
+
 type TextToSpeechProps = {
   children: string
   lang?: string
@@ -32,19 +34,18 @@ function TextToSpeech({
   }, [])
 
   return (
-    <div className="px-2 py-6 flex flex-col items-center bg-primary-800 text-white rounded-xl m-2">
-      <span className="border-b-4 border-dotted border-primary-400 text-6xl p-2">
+    <div className="px-2 py-6 flex flex-col items-center rounded-xl m-2">
+      <span className="border-b-4 border-dotted border-primary-dark text-6xl p-2">
         {children}
       </span>
 
-      <div className="flex">
-        <button className="block" onClick={() => speak()}>
+      <div className="flex justify-between">
+        <Button className="m-2" onClick={() => speak()}>
           Play
-        </button>
-
-        <button className="block" onClick={() => speak(0.5)}>
+        </Button>
+        <Button className="m-2" onClick={() => speak(0.5)}>
           Slow
-        </button>
+        </Button>
       </div>
     </div>
   )
