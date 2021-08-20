@@ -4,18 +4,24 @@ import Button from './index'
 
 afterEach(cleanup)
 
-test('renders button with text', () => {
-  const { getByText } = render(<Button>Click me</Button>)
-  const button = getByText('Click me')
-  expect(button).toBeInTheDocument()
-})
+describe('Button', () => {
+  describe('visual rendering', () => {
+    it('renders button with text', () => {
+      const { getByText } = render(<Button>Click me</Button>)
+      const button = getByText('Click me')
+      expect(button).toBeInTheDocument()
+    })
+  })
 
-test('renders button with text and click event', () => {
-  const onClick = jest.fn()
-  const { getByText } = render(<Button onClick={onClick}>Click me</Button>)
-  const button = getByText('Click me')
+  describe('interactions', () => {
+    it('renders button with text and click event', () => {
+      const onClick = jest.fn()
+      const { getByText } = render(<Button onClick={onClick}>Click me</Button>)
+      const button = getByText('Click me')
 
-  fireEvent.click(button)
+      fireEvent.click(button)
 
-  expect(onClick).toHaveBeenCalledTimes(1)
+      expect(onClick).toHaveBeenCalledTimes(1)
+    })
+  })
 })
