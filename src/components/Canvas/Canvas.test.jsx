@@ -1,6 +1,6 @@
 import { screen, render, cleanup, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
-import Canvas from './index'
+import Canvas from 'components/Canvas'
 
 afterEach(cleanup)
 
